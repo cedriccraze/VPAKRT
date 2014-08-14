@@ -1,0 +1,17 @@
+(********************************************************************
+ * COPYRIGHT -- Pollux
+ ********************************************************************
+ * Program: SerialCodes
+ * File: SerialCodes.var
+ * Author: CEDRIC
+ * Created: August 01, 2014
+ ********************************************************************
+ * Local variables of program SerialCodes
+ ********************************************************************)
+VAR
+	size : INT := 0;
+	url_request_serial : STRING[500] := '~cedriccraze/vpackRT/services/request_ium.php';
+	response : STRING[100000];
+	client : httpClient := (0);
+	step : INT := 0;
+END_VAR

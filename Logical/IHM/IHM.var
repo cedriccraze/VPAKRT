@@ -1,0 +1,18 @@
+(********************************************************************
+ * COPYRIGHT -- Pollux
+ ********************************************************************
+ * Program: IHM
+ * File: IHM.var
+ * Author: CEDRIC
+ * Created: August 13, 2014
+ ********************************************************************
+ * Local variables of program IHM
+ ********************************************************************)
+VAR
+	nActivePage : UDINT := 0;
+	bServerCom : BOOL := FALSE;
+	response : STRING[100000];
+	url_request_serial : STRING[500] := '~cedriccraze/vpackRT/services/info.php';
+	client : httpClient := (0);
+	step : UDINT := 0;
+END_VAR

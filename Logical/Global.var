@@ -1,0 +1,43 @@
+(********************************************************************
+ * COPYRIGHT -- Pollux
+ ********************************************************************
+ * File: Global.var
+ * Author: CEDRIC
+ * Created: July 16, 2014
+ ********************************************************************
+ * Global variables of project VPakRT
+ ********************************************************************)
+VAR
+	gSerialQueue : UDINT := 0; (*Pointer for the queue of serial codes*)
+	gConsecutiveRejects : USINT := 5; (*Allowed number of consecutive rejects before stopping*)
+END_VAR
+VAR RETAIN
+	Parts : ARRAY[0..49] OF Part := [50((0))]; (*The FIFO of parts*)
+END_VAR
+VAR
+	doAccumulator : BOOL := FALSE;
+	doReject : BOOL := FALSE;
+	doCam1TRG : BOOL := FALSE;
+	doPrinter : BOOL := FALSE;
+	doConveyor : USINT := 0;
+	doAlarmTower : alarm_tower := (0);
+	diAccumulator : BOOL := FALSE;
+	diCheckReject : BOOL := FALSE;
+	diCam1RES : BOOL := FALSE;
+	diCam1DV : BOOL := FALSE;
+	diPrinterReady : BOOL := FALSE;
+	diEntry : BOOL := FALSE;
+	diEmergency : BOOL := FALSE;
+	gHost : STRING[80] := '192.168.0.133'; (*Host server address (default 10.0.0.1)*)
+	gOffsetCheckReject : UINT := 400; (*Offset of check reject position*)
+	gOffsetReject : UINT := 300; (*Offset of reject position*)
+	gOffsetCamera : UINT := 200; (*Offset of camera position*)
+	gOffsetPrinter : UINT := 100; (*Offset of printer position*)
+	gSystemUUID : STRING[20] := '99dSBT8TwOwfH8wRnGFX';
+	gLotNumber : STRING[20] := '123456789';
+	gUserUUID : STRING[20] := 'rKsGKLZL9WYUcbvHhipc';
+	gMark : Mark := (0); (*The current marking data (GTIN, Lot number, drug number, ...)*)
+	gSpeed : UDINT := 0;
+	gMoving : USINT := 0; (*Inform if the equipment is moving or not*)
+	gMode : status := (0); (*Defines the machine status (manual, automatic, ...)*)
+END_VAR

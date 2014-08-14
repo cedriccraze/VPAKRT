@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?AutomationStudio Version=4.0.17.85 SP?>
+<Library xmlns="http://br-automation.co.at/AS/Library">
+  <Files>
+    <File>Timer.h</File>
+    <File>Timer.cpp</File>
+    <File>Json.h</File>
+    <File>Json.cpp</File>
+    <File>SerialCodes.h</File>
+    <File>SerialCodes.cpp</File>
+  </Files>
+</Library>
